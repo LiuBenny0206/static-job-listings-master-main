@@ -1,13 +1,209 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --color-LightGrayishCyanBg: hsl(180, 52%, 96%);
+  --color-LightGrayishCyanFilter: hsl(180, 31%, 95%);
+  --color-DarkGrayishCyan: hsl(180, 8%, 52%);
+  --color-VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+  --color-DesaturatedDarkCyan: hsl(180, 29%, 50%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-Black: hsl(0, 0%, 0%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+}
+
+body{
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.MainArea {
+  background-color: var(--color-LightGrayishCyanBg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* HeaderArea */
+
+.header{
+  background-color: var(--color-DesaturatedDarkCyan);
+  height: 20%;
+}
+
+/* FilterArea */
+
+.filter{
+  background-color: var(--color-White);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 1200px;
+  padding: 5px 30px 5px 30px;
+  border-radius: 10px;
+  align-items:center;
+  position: relative;
+  top: -35px;
+  box-shadow:  0 5px 8px -5px var(--color-DesaturatedDarkCyan); /* 水平偏移 垂直偏移 模糊半径 扩散半径 颜色 */
+}
+
+.filter .leftArea{
+  display: flex;
+  flex-direction: row;
+}
+.filter .skillPart{
+  margin-right: 15px;
+  display:flex;
+}
+
+.filter p{
+  background-color: var(--color-LightGrayishCyanBg);
+  height: 80%;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  color: var(--color-DesaturatedDarkCyan);
+  font-weight: 700;
+}
+
+.skillPart #filterbtn{
+  background-color: var(--color-DesaturatedDarkCyan);
+  width: 20px;
+  height: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+.skillPart #filterbtn:hover{
+  background-color: var(--color-Black);
+  cursor: pointer;
+}
+
+
+.filter button{
+  background: none;
+  border: none;
+  color: var(--color-DesaturatedDarkCyan);
+  font-weight: 700;
+}
+.filter button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* JobListsArea */
+.leftPart{
+  display:flex;
+}
+
+
+.jobLists{
+  background-color: var(--color-White);
+  height: 90px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  border-radius: 10px;
+  box-shadow:  0 5px 8px -5px var(--color-DesaturatedDarkCyan); /* 水平偏移 垂直偏移 模糊半径 扩散半径 颜色 */
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+.jobLists svg{
+  border-radius: 50px;
+  height: 90px;
+  width: 90px;
+  margin-right: 25px;
+}
+
+.firstRow{
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+.firstRow p{
+  padding-right:15px
+}
+
+.info{
+  height: 100%;
+}
+
+#title{
+  font-weight: 700;
+  color:var(--color-DesaturatedDarkCyan);
+}
+
+#new{
+  color: var(--color-White);
+  background-color: var(--color-DesaturatedDarkCyan);
+  height: 80%;
+  padding-left: 15px;
+  padding-top: 5px;
+  top: -6px;
+  position: relative;
+  border-radius: 20px
+}
+#featured{
+  color: var(--color-White);
+  background-color: var(--color-Black);
+  height: 80%;
+  padding-left: 15px;
+  padding-top: 5px;
+  top: -6px;
+  position: relative;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.secondRow {
+  height: 20px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.secondRow a:hover{
+  color: var(--color-DesaturatedDarkCyan);
+  cursor: pointer;
+}
+
+.thirdRow {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  margin-top: 20px;
+}
+.thirdRow p{
+  padding-right: 15px;
+  color: var(--color-DarkGrayishCyan);
+}
+
+.rightPart {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.rightPart p{
+  background-color: var(--color-LightGrayishCyanBg);
+  height: 30%;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  color: var(--color-DesaturatedDarkCyan);
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.rightPart p:hover{
+  background-color: var(--color-DesaturatedDarkCyan);
+  color: var(--color-White);
 }
