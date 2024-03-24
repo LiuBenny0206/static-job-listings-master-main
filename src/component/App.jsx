@@ -25,19 +25,6 @@ function App (){
                 tools={data.tools}
               />
             ))}
-            <JobLists 
-              name={data[0].company}
-              new={data[0].new}
-              featured={data[0].featured}
-              position={data[0].position}
-              role={data[0].role}
-              level={data[0].level}
-              postedAt={data[0].postedAt}
-              contract={data[0].contract}
-              location={data[0].location}
-              languages={data[0].languages}
-              tools={data[0].tools}
-            />
         </div>
     );
 }
