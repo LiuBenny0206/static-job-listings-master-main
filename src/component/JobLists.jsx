@@ -9,8 +9,15 @@ import { ReactComponent as ShortlyLogo } from "../images/shortly.svg";
 import { ReactComponent as InsureLogo } from "../images/insure.svg";
 import { ReactComponent as EyecamCoLogo } from "../images/eyecam-co.svg";
 import { ReactComponent as TheAirFilterCompanyLogo } from "../images/the-air-filter-company.svg";
+import events from "inquirer/lib/utils/events";
 
 function JobLists(props){
+
+    function handleFilter(event){
+        props.showFilter();
+        const value = event.target.textContent;
+        props.addFilterValue(value);
+    }
 
     const logoComponents = {
         Photosnap: PhotosnapLogo,
@@ -51,7 +58,7 @@ function JobLists(props){
                     </div>
                 </div>  
             </div>
-            <div className="rightPart">
+            <div className="rightPart" onClick={handleFilter}>
                 <p>{props.role}</p>
                 <p>{props.level}</p>
                 {props.languages.map(language => (

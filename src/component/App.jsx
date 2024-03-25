@@ -4,11 +4,24 @@ import Filter from "./Filter";
 import JobLists from "./JobLists";
 import data from "../data.json"
 
+
 function App (){
+    const [showFilter, setShowFilter] = useState(false);
+    const [filterValue, setFilterValue] = useState([]);
+
+    function handleShowFilter() {        
+        setShowFilter(true);
+    };
+
+    function handleAddFilterDate(value){
+        setFilterValue((prevItem) => [...prevItem, value]);
+        console.log(filterValue);
+    };
+
     return (
         <div className="MainArea">
             <HeaderBg />
-            <Filter />
+            {showFilter && <Filter filterData={filterValue}/>}
             {data.map(data =>(
                 <JobLists 
                 name={data.company}
@@ -23,6 +36,8 @@ function App (){
                 location={data.location}
                 languages={data.languages}
                 tools={data.tools}
+                showFilter={handleShowFilter}
+                addFilterValue={handleAddFilterDate}
               />
             ))}
         </div>
