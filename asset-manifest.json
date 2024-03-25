@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static-job-listings-master-main/static/css/main.addd938a.css",
+    "main.js": "/static-job-listings-master-main/static/js/main.5b46bfb1.js",
+    "static/media/loop-studios.svg": "/static-job-listings-master-main/static/media/loop-studios.48e1e6cbe6cd39290d4167ef66f0f3e0.svg",
+    "static/media/photosnap.svg": "/static-job-listings-master-main/static/media/photosnap.f78ea28434821c4d62b8b5c3179aa20e.svg",
+    "static/media/manage.svg": "/static-job-listings-master-main/static/media/manage.28016d178611d33eec5dd02f07298498.svg",
+    "static/media/insure.svg": "/static-job-listings-master-main/static/media/insure.475398e9dc623057d06646cc3b931d57.svg",
+    "static/media/account.svg": "/static-job-listings-master-main/static/media/account.6d6e6e970d4c99bee1794e8aa5d80466.svg",
+    "static/media/eyecam-co.svg": "/static-job-listings-master-main/static/media/eyecam-co.7859b623ea9687d214deba1511196340.svg",
+    "static/media/shortly.svg": "/static-job-listings-master-main/static/media/shortly.d24afc894ebc66b92d5734d135e22ab6.svg",
+    "static/media/myhome.svg": "/static-job-listings-master-main/static/media/myhome.15686462b48351fc4fa4e6b9cce2b0fa.svg",
+    "static/media/the-air-filter-company.svg": "/static-job-listings-master-main/static/media/the-air-filter-company.39f9255bec3cf47cbcedb908d17c8fcf.svg",
+    "static/media/bg-header-desktop.svg": "/static-job-listings-master-main/static/media/bg-header-desktop.752d0faf14c00c6fb55f968b61e827e0.svg",
+    "static/media/faceit.svg": "/static-job-listings-master-main/static/media/faceit.d7cd409503e417bd1100193c949d4e14.svg",
+    "index.html": "/static-job-listings-master-main/index.html",
+    "main.addd938a.css.map": "/static-job-listings-master-main/static/css/main.addd938a.css.map",
+    "main.5b46bfb1.js.map": "/static-job-listings-master-main/static/js/main.5b46bfb1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.addd938a.css",
+    "static/js/main.5b46bfb1.js"
+  ]
+}
