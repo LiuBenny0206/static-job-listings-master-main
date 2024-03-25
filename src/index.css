@@ -34,6 +34,7 @@ body{
 .header{
   background-color: var(--color-DesaturatedDarkCyan);
   height: 20%;
+  width: 100%;
 }
 
 /* FilterArea */
@@ -129,6 +130,9 @@ body{
   width: 90px;
   margin-right: 25px;
 }
+.jobLists hr{
+  border: hidden;
+}
 
 .firstRow{
   display: flex;
@@ -213,4 +217,121 @@ body{
 .rightPart p:hover{
   background-color: var(--color-DesaturatedDarkCyan);
   color: var(--color-White);
+}
+
+@media only screen and (max-width: 1260px) {
+  .filter{
+    width: 600px;
+  }
+  .header svg{
+    width: 100%;
+  }
+
+  .jobLists{
+    background-color: var(--color-White);
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    margin-top: 50px;
+  }
+
+  .jobLists svg {
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    margin-right: 25px;
+}
+  .jobLists hr {
+    border: thin solid hsl(0deg 0.91% 64.41%);
+    margin: 20px 0px;
+}
+
+  .profilePic {
+    flex-shrink: 0;
+    position: relative;
+    top: -50px;
+    height: 30px;
+}
+  .leftPart {
+    display: flex;
+    flex-direction: column;
+}
+  .firstRow {
+    margin-bottom: 20px;
+}
+  .secondRow {
+    font-weight: 700;
+  }
+  .rightPart {
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+  }
+  .rightPart p {
+    padding-left: 10px;
+    margin-left: 0px;
+    height: 80%;
+    margin-right: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 930px) {
+  .filter{
+    width: 400px;
+  }
+  .jobLists{
+    background-color: var(--color-White);
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .filter{
+    width: 240px;
+    height: 120px;
+  }
+  .filter .leftArea{
+    flex-wrap: wrap;
+  }
+  .filter p{
+    margin-bottom: 20px;
+  }
+  .filterbtn{
+    height: 80%;
+  }
+  .jobLists{
+    background-color: var(--color-White);
+    height: 330px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    margin-top: 50px;
+  }
+  .jobLists hr {
+    border: thin solid hsl(0deg 0.91% 64.41%);
+    margin: 20px 0px;
+    width: 100%;
+}
+  .rightPart {
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+  .rightPart p {
+  padding-left: 10px;
+  margin-left: 0px;
+  height: 30%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
 }

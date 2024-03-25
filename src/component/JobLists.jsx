@@ -58,6 +58,7 @@ function JobLists(props){
                     </div>
                 </div>  
             </div>
+            <hr></hr>
             <div className="rightPart" onClick={handleFilter}>
                 <p>{props.role}</p>
                 <p>{props.level}</p>

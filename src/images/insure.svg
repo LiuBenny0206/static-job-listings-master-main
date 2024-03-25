@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88">
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 20 90 50">
   <defs>
     <filter id="b" width="139.8%" height="139.8%" x="-19.9%" y="-19.9%" filterUnits="objectBoundingBox">
       <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="17.5"/>
