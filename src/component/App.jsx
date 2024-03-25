@@ -13,35 +13,59 @@ function App (){
         setShowFilter(true);
     };
 
+    function handleHideFilter() {
+        setShowFilter(false);
+        setFilterValue([]);
+    };
+
     function handleAddFilterDate(value){
         setFilterValue((prevItem) => [...prevItem, value]);
         console.log(filterValue);
     };
 
-    return (
+    function handleDeleteFilterDate(id) {
+        const index = Number(id); // 将 id 转换为数字类型
+        setFilterValue((prevItems) => prevItems.filter((item, itemIndex) => itemIndex !== index));
+      }
+
+      const filteredJobs = data.filter(data =>
+        filterValue.every(filter => 
+          data.role.includes(filter) ||
+          data.level.includes(filter) ||
+          data.languages.includes(filter) ||
+          data.tools.includes(filter)
+        )
+      );
+
+      return (
         <div className="MainArea">
-            <HeaderBg />
-            {showFilter && <Filter filterData={filterValue}/>}
-            {data.map(data =>(
-                <JobLists 
-                name={data.company}
-                logo={data.logo}
-                new={data.new}
-                featured={data.featured}
-                position={data.position}
-                role={data.role}
-                level={data.level}
-                postedAt={data.postedAt}
-                contract={data.contract}
-                location={data.location}
-                languages={data.languages}
-                tools={data.tools}
-                showFilter={handleShowFilter}
-                addFilterValue={handleAddFilterDate}
-              />
-            ))}
+          <HeaderBg />
+          {showFilter && <Filter 
+            filterData={filterValue} 
+            filterId={handleDeleteFilterDate}
+            closeFilter={handleHideFilter}
+          />}
+          {filteredJobs.map((jobData) => (
+            <JobLists 
+              key={jobData.id} // Make sure to use a unique key for each child, like jobData.id
+              name={jobData.company}
+              logo={jobData.logo}
+              new={jobData.new}
+              featured={jobData.featured}
+              position={jobData.position}
+              role={jobData.role}
+              level={jobData.level}
+              postedAt={jobData.postedAt}
+              contract={jobData.contract}
+              location={jobData.location}
+              languages={jobData.languages}
+              tools={jobData.tools}
+              showFilter={handleShowFilter}
+              addFilterValue={handleAddFilterDate}
+            />
+          ))}
         </div>
-    );
+      );
 }
 
 export default App;

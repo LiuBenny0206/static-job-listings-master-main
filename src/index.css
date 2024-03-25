@@ -18,6 +18,7 @@ body{
   font-weight: 500;
   font-style: normal;
   font-size: 15px;
+  background-color: var(--color-LightGrayishCyanBg);
 }
 
 .MainArea {
@@ -74,7 +75,7 @@ body{
   position: relative;
 }
 
-.skillPart #filterbtn{
+.filterbtn{
   background-color: var(--color-DesaturatedDarkCyan);
   width: 20px;
   height: 100%;
@@ -83,22 +84,23 @@ body{
   padding-right: 20px;
   border-radius: 0px 5px 5px 0px;
   position: relative;
+  border: none;
 }
 
 
-.skillPart #filterbtn:hover{
+.filterbtn:hover{
   background-color: var(--color-Black);
   cursor: pointer;
 }
 
 
-.filter button{
+.filter #rightPartBtn{
   background: none;
   border: none;
   color: var(--color-DesaturatedDarkCyan);
   font-weight: 700;
 }
-.filter button:hover{
+.filter #rightPartBtn:hover{
   text-decoration: underline;
   cursor: pointer;
 }
