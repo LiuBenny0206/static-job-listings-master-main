@@ -205,10 +205,6 @@ body{
 .rightPart p{
   background-color: var(--color-LightGrayishCyanBg);
   height: 30%;
-  padding-top: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
   color: var(--color-DesaturatedDarkCyan);
   font-weight: 700;
   margin-left: 15px;
