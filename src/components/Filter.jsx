@@ -1,13 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 
 
 function Filter (props){
-    function passId(event){
+    const passId = (event) => {
         props.filterId(event.currentTarget.id); // 使用 currentTarget 代替 target
         console.log(event.currentTarget.id);
     }
     
-    function handleFilterBar(){
+    const handleFilterBar = () => {
         props.closeFilter();
     }
 

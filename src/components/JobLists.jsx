@@ -13,7 +13,7 @@ import events from "inquirer/lib/utils/events";
 
 function JobLists(props){
 
-    function handleFilter(event){
+    const handleFilter = (event) => {
         props.showFilter();
         const value = event.target.textContent;
         props.addFilterValue(value);

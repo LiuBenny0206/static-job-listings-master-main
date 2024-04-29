@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useMemo, useCallback} from "react";
 import HeaderBg from "./HeaderBg";
 import Filter from "./Filter";
 import JobLists from "./JobLists";
@@ -9,33 +9,32 @@ function App (){
     const [showFilter, setShowFilter] = useState(false);
     const [filterValue, setFilterValue] = useState([]);
 
-    function handleShowFilter() {        
+    const handleShowFilter = () => {        
         setShowFilter(true);
     };
 
-    function handleHideFilter() {
+    const handleHideFilter = () => {
         setShowFilter(false);
         setFilterValue([]);
     };
 
-    function handleAddFilterDate(value){
-        setFilterValue((prevItem) => [...prevItem, value]);
-        console.log(filterValue);
-    };
+    const handleAddFilterDate = useCallback((value) => {
+        setFilterValue(prevItem => [...prevItem, value]);
+    }, []);
 
-    function handleDeleteFilterDate(id) {
-        const index = Number(id); // 将 id 转换为数字类型
-        setFilterValue((prevItems) => prevItems.filter((item, itemIndex) => itemIndex !== index));
-      }
+    const handleDeleteFilterDate = useCallback((id) => {
+        const index = Number(id);
+        setFilterValue(prevItems => prevItems.filter((item, itemIndex) => itemIndex !== index));
+    });
 
-      const filteredJobs = data.filter(data =>
-        filterValue.every(filter => 
+    const filteredJobs = useMemo(() => (
+      data.filter(data => filterValue.every(filter => 
           data.role.includes(filter) ||
           data.level.includes(filter) ||
           data.languages.includes(filter) ||
           data.tools.includes(filter)
-        )
-      );
+      ))
+    ),[filterValue]);
 
       return (
         <div className="MainArea">
@@ -47,7 +46,7 @@ function App (){
           />}
           {filteredJobs.map((jobData) => (
             <JobLists 
-              key={jobData.id} // Make sure to use a unique key for each child, like jobData.id
+              key={jobData.id}
               name={jobData.company}
               logo={jobData.logo}
               new={jobData.new}
